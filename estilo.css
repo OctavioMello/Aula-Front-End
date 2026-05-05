@@ -1,0 +1,121 @@
+/* Variáveis CSS: definimos cores globais para facilitar a manutenção*/
+:root{
+    --cor-primaria: #0984e3; //Azul para botões e links
+    --cor-escura: #2d3436; //Cinza escuro para textos e fundos
+    --cor-fundo: #dfe6e9; //Cinza claro para o fundo da página
+    --branco- #ffffff;
+    --transicao: 0.3s ease; //Tempo padrão para efeitos animação
+}
+
+/* Reset e Box Model: resetamos as margens do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; //Garantir que o padding e o margin não quebre limites de tamanho
+    font-family: sans-serif;
+}
+
+/* Containers: limita a largura do conteúdo para não "espalhar" em monitores maiores*/
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header: com FlexBox*/
+.main-header{
+    background-color: var(--cor-escura);
+    color: var(--branco);
+    padding: 15px 0;
+}
+
+.header-flex{
+    display: flex; // Ativa o FlexBox no container principal
+    justify-content: space-between; // Empurra a logo para a esquerda e o menu para a direita
+    align-items: center; // Alinha os itens verticalmente no centro
+}
+
+.logo span{
+    color:var (--cor-primaria);
+    font-weight: bold;
+}
+
+.nav-menu ul{
+    display: flex;
+    list-style: none; // Remove marcação da lista
+    gap: 20px; // Cria um espaço entre cada item da lista
+}
+
+.nav-menu a{
+    color: var(--branco);
+    text-decoration: none; // Remove o sublinhado dos links
+    transition: var(--transicao); // Suaviza a mudança de cor no hover
+}
+
+.nav-menu a:hover{
+    color: var(--cor-primaria);
+}
+
+/*Hero Banner com Background*/
+.hero-banner {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), /*Camada escura sobre a foto*/
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200') no-repeat center center/cover;
+    /*Background-size: cover faz a imagem preencher todo o espaço sem distorcer a mesma*/
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Estilização do grid de produtos e cards(Box Model)*/
+.titulo-secao {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--cor-escura);
+}
+
+.grid-produtos {
+    display: flex;
+    flex-wrap: wrap; // Impedir que os cards pulem para a linha debaixo se não couberem na mesma linha
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px; // Espaço da margem de baixo
+}
+
+.card {
+    background: var(--branco);
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; //Garante que a imagem não saia para fora do arredondamento
+    transition: transform 0.3s ease; // Prepara o efeito de deslocamento
+}
+
+/* Efeito de trazer para frente o card*/
+// Hover ativa quando passa o mouse encima
+.card:hover{
+    transform: translateY(-10px) scale(1.02); //Sobe 10px e aumenta em 2% do tamanho
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); //Sombra profunda para dar efeito de altura
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-corpo {
+    padding: 20x;
+}
+
+.card-corpo h3{
+    margin-bottom: 10px;
+}
+
+.card-corpo p{
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-sizing: 1.2rem;
+    margin-bottom: 15px;
+}
