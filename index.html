@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula Front End</title>
+    <title>Tech1ESPF -- Landing Page Profissional</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    
+    <!--HEADER: o topo do site-->
+    <header class="main-header">
+        <div class="container header-flex"> <!--Container para limitar a largura e alinhar os itens-->
+            <div class="logo">TECH<span>STORE</span></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Hero Section: Área de destaque com imagem de fundo-->
+    <section class="hero-banner">
+        <div class="container">
+            <h1>O futuro do seu Setup</h1>
+            <p>Performance extrema com periféricos de alta tecnologia</p>
+            <a href="#" class="btn-destaque">Comprar agora</a>
+        </div>
+    </section>
+
+    <!--Seção de produtos: Mostra o Box Model e FlexBox nos cards-->
+    <section class="container">
+        <h2 class="titulo-secao">Destaques da Semana</h2>
+        <div class="grid-produtos">
+            <!--CArd 01-->
+            <article class="card">
+                <div class="card-img" style="background-image: url('https://placehold.co/400x300/2d3436/white?text=Mouse+Gamer');"></div>
+                <div class="card-corpo">
+                    <h3>Mouse Wireless</h3>
+                    <p>R$ 199,00</p>
+                    <button>Adicionar ao CARRINHO</button>
+                </div>
+            </article>
+            <!--CArd 02-->
+            <article class="card">
+                <div class="card-img" style="background-image: url('https://placehold.co/400x300/2d3436/white?text=Teclado+RGB');"></div>
+                <div class="card-corpo">
+                    <h3>Teclado Mecânico</h3>
+                    <p>R$ 450,00</p>
+                    <button>Adicionar ao CARRINHO</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer-simples">
+        <p>&copy; 2026 Tech1ESPF - A loja da turma de ESW</p>
+    </footer>
 </body>
 </html>
